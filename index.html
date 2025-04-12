@@ -1,0 +1,120 @@
+<!--Coding Steps:
+Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+A Bootstrap styled table representing your choice of data.
+A Bootstrap styled form that allows a user to add a new row to the table when clicking on submit.-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>W10 Mama K's Recipes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
+    crossorigin="anonymous"/>
+
+  </head>
+  <header class="text-center py-5" style="background: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg') center/cover no-repeat; height: 400px; position: relative;">
+    <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+        <div class="p-4 bg-white bg-opacity-75 rounded shadow">
+            <h1 class="display-2 fw-bold text-dark">Discover All of Moms Tasty Recipes</h1>
+            <p class="lead fs-3 fw-semibold text-dark">Just like the ones  you had as a kid</p>
+        </div>
+    </div>
+</header>
+  <body>
+    <!-- Main Content -->
+    <!-- This section contains the main content of the page, including a welcome message and a list of featured recipes. -->
+    <div class="container mt-4">
+      <h1 class="text-center">Welcome to Mama K's Recipe Collection</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Featured Recipes</h3>
+
+          <!-- This table displays a list of featured recipes with ingredients and category. -->
+          <table class="table table-success table-striped table-bordered">
+            <thead id="tHead">
+              <tr>
+                <th scope="col" class="bg-secondary">Recipe Name</th>
+                <th scope="col" class="bg-secondary">Main Ingredients</th>
+                <th scope="col" class="bg-secondary">Category</th>
+              </tr>
+            </thead>
+            <tbody id="tBody">
+              <tr>
+                <td>Shepherd's Pie</td>
+                <td>Potatoes, Beef, Tomato Sauce</td>
+                <td>Main Course</td>
+              </tr>
+              <tr>
+                <td>Chocolate Lava Cake</td>
+                <td>Flour, Cocoa, Sugar</td>
+                <td>Dessert</td>
+              </tr>
+              <tr>
+                <td>Chili</td>
+                <td>Beef, Beans, Onion</td>
+                <td>Side Dish</td>
+              </tr>
+              <tr>
+                <td>Texas Roadhouse House Salad</td>
+                <td>Lettuce, Crutons, Egg, Cheese, Dressing</td>
+                <td>Appetizer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- Closes col-md-6 -->
+      </div> <!-- Closes row -->
+    </div> <!-- Closes container -->
+    
+    <!-- Submit Recipe Form -->
+    
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Submit Your Favorite Recipes</h1>
+        <!-- This form allows the user to submit a recipe by providing the name, ingredients and course category.
+         An ID is needed so that we can attach an event, such as making fields required. -->
+        <form id="recipeForm">
+          <div class="mb-3">
+              <label for="recipeName" class="form-label">Recipe Name</label>
+              <input type="text" class="form-control" id="recipeName" placeholder="Enter recipe name">
+          </div>
+          <div class="mb-3">
+              <label for="ingredients" class="form-label">Ingredients</label>
+              <textarea class="form-control" id="ingredients" rows="3" placeholder="Enter ingredients"></textarea>
+          </div>
+          <div class="mb-3">
+              <label for="category" class="form-label">Category</label>
+              <select class="form-select" id="category">
+                  <option value="Main Course">Main Course</option>
+                  <option value="Dessert">Dessert</option>
+                  <option value="Side Dish">Side Dish</option>
+                  <option value="Appetizer">Appetizer</option>
+              </select>
+          </div>
+          <button type="submit" class="btn btn-secondary" id="formSubmit">Submit Recipe</button>
+      </form>
+      </div>
+    
+
+    <!-- Footer -->
+    <!-- This footer provides basic information and copyright details. There was a missing close </div> that was preventing the footer to span the width of the page.-->
+    <footer class="bg-dark text-white text-center py-3 mt-4 container-fluid">
+      <p>&copy; 2025 Mama K's Recipe Collection</p>
+    </footer>
+
+    <!-- Bootstrap Script -->
+    <!-- This script enables Bootstrap’s interactive components such as dropdowns and modals. -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" 
+    crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
