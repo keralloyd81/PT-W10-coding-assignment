@@ -17,11 +17,15 @@ we need to get values with: getElementById()
 */
 
 //This code is what will be used for the assignment. Additional code below for added functions---
+
+//Get the form from its ID
 const formButton = document.getElementById('formSubmit')
 
+//Add a click event listener to the button
 formButton.addEventListener('click', (event) => {
-    event.preventDefault()
-//variables to hold the values of the form
+    event.preventDefault() //Prevents degault form submission-reloads page
+
+//variables to hold the values of the form fields
 let recipeName = document.getElementById('recipeName').value
 let ingredients = document.getElementById('ingredients').value
 let category = document.getElementById('category').value
@@ -32,24 +36,28 @@ let category = document.getElementById('category').value
     return;
   }
 
-//create a tr node to append to my form
+//create a tr node to append to my form (holds recipe data)
 let newTableRow = document.createElement('tr')
 
-
+//Create a table cell for the recipe name and add it to new row
 let recipeNameNode = document.createElement('td')
  recipeNameNode.innerHTML = recipeName
  newTableRow.append(recipeNameNode)
 
+ //Create a td for the ingredients and add it to a new row
 let ingredientsNode = document.createElement('td')
  ingredientsNode.innerHTML = ingredients
  newTableRow.append(ingredientsNode)
 
+//Create td for category and add to new row 
 let categoryNode = document.createElement('td')
  categoryNode.innerHTML = category
  newTableRow.append(categoryNode)
 
+ //Append the new row to the tbody in the HTML
 document.getElementById('tBody').appendChild(newTableRow)//append to table body
 
+//Clear the form fields so the user can add another recipe
 document.getElementById('recipeName').value = ''
 document.getElementById('ingredients').value = ''
 document.getElementById('category').value = ''
